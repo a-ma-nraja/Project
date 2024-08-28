@@ -1,0 +1,26 @@
+{
+  "name": "backend-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "20.13.1",
+    "npm": "10.5.2"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix portfolio",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix portfolio",
+    "dev": "concurrently \"npm run server\"\"npm run portfolio\"",
+     "start": "node server.js",
+     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix portfolio && npm run build --prefix portfolio"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "nodemon": "^3.1.4"
+  }
+}
